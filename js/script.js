@@ -6,7 +6,7 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function checkUnique(array) { 
+    const isUnique = function (array) { 
         const obj = {};
 
         for (let i = 0; i < array.length; i++) { 
@@ -40,8 +40,7 @@
     for(let i = 0; i < 100; i++) {
         const fullArr = uniqueValArr();
         console.log(fullArr);
-        console.log(checkUnique(fullArr));
 
-        // if (i === 99) console.log(checkUnique(fullArr));
+        if (i === 99) console.log(isUnique(fullArr));
     }
 }());
