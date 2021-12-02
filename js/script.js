@@ -6,17 +6,6 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    const isUnique = function(array) { 
-        const obj = {};
-
-        for (let i = 0; i < array.length; i++) { 
-            if (obj[array[i]]) return false;
-            obj[array[i]] = true;
-        }
-
-        return true;
-    }
-
     const getUniqueVal = function() {
         const arr = [];
 
@@ -28,7 +17,6 @@
             if (arr.includes(randomNum)) return closure();
             
             arr.push(randomNum);
-            arr.sort((a, b) => a - b);
             return arr;
         }
 
@@ -38,10 +26,7 @@
     const uniqueValArr = getUniqueVal();
     
     for (let i = 0; i < 100; i++) {
-        const fullArr = uniqueValArr();
-        console.log(fullArr);
-        console.log(isUnique(fullArr));
-
-        // if (i === 99) console.log(isUnique(fullArr));
+        console.log(uniqueValArr());
     }
+
 }());
